@@ -1,23 +1,23 @@
 #include<stdio.h>
 #include<stdlib.h> //para malloc
 
-int eleunique(int vet[], int n) //função para checar quais elemntos são únicos
+int eleunique(int vet[], int n) //funcao para checar quais elemntos sao unicos
 {
 	int i, a=0;
 	printf("\nO(s) elemento(s) unico(s) eh(sao):");
-	if (vet[0] != vet[1]) //checa se o primeiro é unico (porque voce nao vai poder comparar com vet[-1]
+	if (vet[0] != vet[1]) //checa se o primeiro eh unico (porque voce nao vai poder comparar com vet[-1])
 	{
 	printf("\n%d (posicao 0)", vet[0]);
-	a++; //"a" é usada para rastrear a existencia elemntos unicos. Se nenhuma das trocas for feita, a nao sera incrementada e será igual a 0, fazendo a mensagem "Nao exsite um elemento unico" ser impressa 
+	a++; //"a" e usada para rastrear a existencia elemntos unicos. Se nenhuma das trocas for feita, a nao sera incrementada e sera igual a 0, fazendo a mensagem "Nao exsite um elemento unico" ser impressa 
 	}
-	if (vet[n-1] != vet[n-2]) //checa se o último é unico
+	if (vet[n-1] != vet[n-2]) //checa se o ultimo eh unico
 	{
 	printf("\n%d (posicao 1)", vet[n-1]);
 	a++;
 	}
 	for (i=1; i<n-1; i++)
 	{
-		if (vet[i] != vet[i-1] && vet[i] != vet[i+1]) //checa se os elementos do meio do vetor são unicos
+		if (vet[i] != vet[i-1] && vet[i] != vet[i+1]) //checa se os elementos do meio do vetor sao unicos
 		{
 		printf("\n%d (posicao %d)", vet[i], i); //imprime os elementos unicos
 		a++;
@@ -30,7 +30,7 @@ int eleunique(int vet[], int n) //função para checar quais elemntos são únicos
 	return 0;
 }
 
-void bubble(int vet[], int n) //função para ordenar o vetor
+void bubble(int vet[], int n) //funcao para ordenar o vetor
 {
 	int a, j, i; 
 	for(j=0; j<n-j; j++) //percorre o vetor 
@@ -50,8 +50,8 @@ void bubble(int vet[], int n) //função para ordenar o vetor
 
 int main()
 {
-	int i, n, *vet; //decara os inteiros necessários e tambem um ponteiro *vet para inteiros, que será apontado posteriormente para o enderaço alocado com o malloc
-	printf("Quanto numeros voce quer? "); //pergunta quantos numeros serao necessários armazenar
+	int i, n, *vet; //decara os inteiros necessarios e tambem um ponteiro *vet para inteiros, que sera apontado posteriormente para o enderaco alocado com o malloc
+	printf("Quanto numeros voce quer? "); //pergunta quantos numeros serao necessarios armazenar
 	scanf("%d", &n);
 	vet=(int *)malloc(n*sizeof(int)); //aloca dinamicamente somente a memoria necessaria
 	printf("entre com seus numeros:\n");
