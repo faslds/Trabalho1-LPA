@@ -1,9 +1,10 @@
 #include<stdio.h>
-#define T 5
+#include<stdlib.h>
+//#define T 5
 
 closestpair(int vet[], int n) //funcao para encontrar os dois pares com a menor diferenca
 {
-	int c, i, j, menor, a, b, m=n;
+	int a, b, c, i, j, menor;//, a, b;//, m=n;
 	
 	if (vet[0] > vet[1]) //os 3 "if's" sao usados para evitar que a variavel menor seja negativa. Eles sao usados abaixo pelo mesmo motiva
 	{
@@ -50,11 +51,14 @@ closestpair(int vet[], int n) //funcao para encontrar os dois pares com a menor 
 
 int main()
 {
-	int i, n, vet[T];
-	
+	int i, n, *vet;
+	printf("Quantos numeros serao entrados?\n");
+	scanf("%d", &n);
+	vet=(int*)malloc(n*sizeof(int));
 	printf("Digite os numeros: ");
-	for (i=0; i<T; i++)
+	for (i=0; i<n; i++)
 		scanf("%d", &vet[i]);
 	printf("\nOs dois elementos com a menor diferenca sao:\n");
-	closestpair(vet, T);
+	closestpair(vet, n);
+	free(vet);
 }
