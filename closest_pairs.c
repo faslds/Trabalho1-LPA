@@ -1,12 +1,11 @@
 #include<stdio.h>
 #include<stdlib.h>
-//#define T 5
 
 closestpair(int vet[], int n) //funcao para encontrar os dois pares com a menor diferenca
 {
-	int a, b, c, i, j, menor;//, a, b;//, m=n;
+	int a, b, c, i, j, menor;
 	
-	if (vet[0] > vet[1]) //os 3 "if's" sao usados para evitar que a variavel menor seja negativa. Eles sao usados abaixo pelo mesmo motiva
+	if (vet[0] > vet[1]) //os 3 "if's" sao usados para evitar que a variavel menor seja negativa. Eles sao usados abaixo pelo mesmo motivo
 	{
 		menor = vet[0] - vet[1];
 	}
@@ -16,7 +15,7 @@ closestpair(int vet[], int n) //funcao para encontrar os dois pares com a menor 
 	}
 	if (vet[0]==vet[1])
 	{
-		menor = 0; //é feito esse preimeiro teste para ja inicializar esta variavel com algum valor, e depois ser possivel a comparacao.
+		menor = 0; //eh feito esse preimeiro teste para ja inicializar esta variavel com algum valor, e depois ser possivel a comparacao.
 	}
 	
 
