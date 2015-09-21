@@ -1,5 +1,6 @@
 #include<stdio.h>
 #include<stdlib.h>
+#include<math.h>
 
 closestpair(int vet[], int n) //funcao para encontrar os dois pares com a menor diferenca
 {
@@ -50,14 +51,14 @@ closestpair(int vet[], int n) //funcao para encontrar os dois pares com a menor 
 
 int main()
 {
-	int i, n, *vet;
+	int i, n, *vet;//declara o ponteiro que sera apontado para o endereco que malloc ira retornar
 	printf("Quantos numeros serao entrados?\n");
 	scanf("%d", &n);
 	vet=(int*)malloc(n*sizeof(int));
 	printf("Digite os numeros: ");
-	for (i=0; i<n; i++)
+	for (i=0; i<n; i++)//esse for preenche o vetor
 		scanf("%d", &vet[i]);
 	printf("\nOs dois elementos com a menor diferenca sao:\n");
-	closestpair(vet, n);
-	free(vet);
+	closestpair(vet, n);//chama a funcao que imprime os dois numeros com a menor diferenca
+	free(vet);//libera a memoria alocada
 }
