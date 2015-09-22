@@ -50,9 +50,14 @@ void bubble(int vet[], int n) //funcao para ordenar o vetor
 
 int main()
 {
-	int i, n, *vet; //decara os inteiros necessarios e tambem um ponteiro *vet para inteiros, que sera apontado posteriormente para o enderaco alocado com o malloc
+	int i, n=3, *vet; //decara os inteiros necessarios e tambem um ponteiro *vet para inteiros, que sera apontado posteriormente para o enderaco alocado com o malloc
 	printf("Quantos numeros voce quer? "); //pergunta quantos numeros serao necessarios armazenar
-	scanf("%d", &n);
+	scanf("%d", &n);	
+	while (n<1)
+	{
+		printf("Favor digitar um numero maior que 0.\n");//para que nao seja digitado um numero que de erro no programa
+		scanf("%d", &n);
+	}
 	vet=(int *)malloc(n*sizeof(int)); //aloca dinamicamente somente a memoria necessaria
 	printf("entre com seus numeros:\n");
 	for (i=0; i<n; i++)
