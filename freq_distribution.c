@@ -50,6 +50,11 @@ int main()
 	int n, k, *vet, *freq;//declara ponteiros que posteriormente serao apontados para os enderecos que a fucao malloc vai retornar
 	printf("Quantos numeros serao entrados?");
 	scanf("%d", &n);
+	while (n<1)
+	{
+		printf("Favor digitar um numero maior que 0.\n");//para que nao seja digitado um numero que de erro no programa
+		scanf("%d", &n);
+	}
 	vet=(int*)malloc(n*sizeof(int));//chama malloc uma vez para o vetor vet e outra para o vetor freq
 	freq=(int*)malloc(n*sizeof(int));//cria dois vetores diferentes do mesmo tamanho
 	printf("Digite os numeros: ");
