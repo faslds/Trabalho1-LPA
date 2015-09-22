@@ -10,11 +10,6 @@ int eleunique(int vet[], int n) //funcao para checar quais elemntos sao unicos
 	printf("\n%d", vet[0]);
 	a++; //"a" e usada para rastrear a existencia elemntos unicos. Se nenhuma das trocas for feita, a nao sera incrementada e sera igual a 0, fazendo a mensagem "Nao exsite um elemento unico" ser impressa 
 	}
-	if (vet[n-1] != vet[n-2]) //checa se o ultimo eh unico
-	{
-	printf("\n%d", vet[n-1]);
-	a++;
-	}
 	for (i=1; i<n-1; i++)
 	{
 		if (vet[i] != vet[i-1] && vet[i] != vet[i+1]) //checa se os elementos do meio do vetor sao unicos
@@ -22,6 +17,11 @@ int eleunique(int vet[], int n) //funcao para checar quais elemntos sao unicos
 		printf("\n%d", vet[i]); //imprime os elementos unicos
 		a++;
 		}
+	}
+	if (vet[n-1] != vet[n-2]) //checa se o ultimo eh unico
+	{
+	printf("\n%d", vet[n-1]);
+	a++;
 	}
 	if (a == 0)
 	{
