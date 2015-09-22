@@ -6,7 +6,8 @@ void bubble(int vet[], int n) //funcao para ordenar o vetor
 	int a, j, i; 
 	for(j=0; j<n-j; j++) //percorre o vetor 
 	{
-		for (i=0; i<n-j-1;i++) //percorre o vetor e compara cada elemento com o do seu lado direito (vet[i+1]). Se o elemento da direita for menor, troca os dois de lugar
+		for (i=0; i<n-j-1;i++) /*percorre o vetor e compara cada elemento com o do seu lado direito (vet[i+1]).
+		Se o elemento da direita for menor, troca os dois de lugar*/
 		{
 			if (vet[i+1]<vet[i])
 			{
@@ -39,13 +40,15 @@ int main()
 	int i, n, *vet;//declara o ponteiro que sera apontado para o endereco que malloc ira retornar
 	printf("Quantos numeros serao entrados?\n");
 	scanf("%d", &n);
+	while (n<2)
+	{
+		printf("Favor digitar um numero maior que 1.\n");//para que nao seja digitado um numero que de erro no programa
+		scanf("%d", &n);
+	}
 	vet=(int*)malloc(n*sizeof(int));
 	printf("Digite os numeros: ");
 	for (i=0; i<n; i++)//esse for preenche o vetor
 		scanf("%d", &vet[i]);
-	printf("O seu vetor eh:");
-	for (i=0; i<n; i++)//esse for preenche o vetor
-		printf("\n%d", vet[i]);
 	bubble(vet, n); //ordena o vetor
 	printf("\nOs dois elementos com a menor diferenca sao:\n");
 	closestpair(vet, n);//chama a funcao que imprime os dois numeros com a menor diferenca
