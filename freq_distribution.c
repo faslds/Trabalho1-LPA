@@ -7,7 +7,6 @@ freqcount(int vet[], int freq[], int n) //cria um vetor freq armazenando as freq
 	for (i=0; i<n; i++)
 	{
 		f=1; //f ja eh inicializado com 1 pois se o numero ja foi entrado, sua frequencia eh no minimo 1
-		//aux=vet[i];
 		for (j=i+1; j<n; j++)
 		{
 			if (vet[j]==vet[i])
@@ -16,9 +15,8 @@ freqcount(int vet[], int freq[], int n) //cria um vetor freq armazenando as freq
 				freq[j] = -1; /*marca as posicoes do vetor freq com -1 quando a posicao se repete, 
 para que possa armazenar a frequencia de cada numero apenas uma vez, e depois poder acha-las mais facilmente */
 			}
-			
 		}
-		freq[i]=f;
+		freq[i]=f; //armazena a frequencia do numero no vetor de frequencias
 	}
 }
 
@@ -27,7 +25,7 @@ para que se hajam numeros diferentes com uma mesma frequencia (e elas sejam maxi
 esses numeros sejam encontrados e impressos */
 freqscan(int vet[], int freq[], int n)
 {
-	int i, j, m=0;//m sera o valor comparado para achar o maior valor de freq[]
+	int i, j, m=0;// m sera o valor comparado para achar o maior valor de freq[]
 	for (i=0; i<n; i++)
 	{
 		if (freq[i]>m)
@@ -56,7 +54,7 @@ int main()
 		scanf("%d", &n);
 	}
 	vet=(int*)malloc(n*sizeof(int));//chama malloc uma vez para o vetor vet e outra para o vetor freq
-	freq=(int*)malloc(n*sizeof(int));//cria dois vetores diferentes do mesmo tamanho
+	freq=(int*)malloc(n*sizeof(int));//cria dois vetores diferentes do mesmo tamanho, um vet e outro freq
 	printf("Digite os numeros: ");
 	for (k=0; k<n; k++) //preenche o vetor
 	scanf("%d", &vet[k]);
