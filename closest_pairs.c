@@ -21,7 +21,7 @@ void bubble(int vet[], int n) //funcao para ordenar o vetor
 
 closestpair(int vet[], int n) //funcao que compara os elementos e acha o par com a menor diferenca
 {
-	int i, posicao=0, dif, c;
+	int i, c, dif, posicao=0;
 	dif=vet[1] - vet[0]; //dif eh inicializada com a diferenca entre os dois primeiros elementos.
 	for (i=1; i<n-1; i++)
 	{
