@@ -9,9 +9,16 @@ Este repósitório contém os exercícios do primeiro trabalho da disciplina SSC
 Descrição dos exercícios e como o programa os resolve:
 
 1- Closest Pairs: O usuário entra com um conjunto de n inteiros. O programa acha o par de números com a menor diferença 
-entre eles, ordenando a lista (com o método bubble sort) e encontrando a diferença de cada elemento com seu anterior, e depois compara cada uma destas 
-diferenças para encontrar a menor, para que possa ser encontrado o par de números que se encaixa na descrição.
+entre eles, ordenando a lista (com o método bubble sort) e encontrando a diferença de cada elemento com seu anterior,
+e depois compara cada uma destas diferenças para encontrar a menor, para que possa ser encontrado o par de números que se
+encaixa na descrição.
 
 2- Element Uniqueness: O usuário entra novamente com n inteiros, e o programa encontra quais desses inteiros são únicos 
 na lista. O programa também encontrará o caso em que não existe um elemento único (por exemplo, numa entrada de 5 inteiros,
-que sejam 2 2 3 3 3). Para fazer isso, a lista é ordenada novamente por meio do bubble sort
+que sejam 2 2 3 3 3). Para fazer isso, a lista é ordenada novamente por meio do bubble sort, e o programa compara cada número
+com seus dois "vizinhos". Se eles forem diferentes, como a lista está ordenada, esse elemento do meio é único. No caso dos 
+da lista (primeira e última posição), o elemento é apenas comparado com o seu sucessor (no caso da primeira posição) ou com 
+seu antecessor (no caso do último da lista). Toda vez que ele encontra um elemento único, ele o imprime. Se não existe um 
+elemento único, um contador é incrementado e usado para imprimir uma mensagem de que não existe um elemento único.
+
+3- Frequency Distribution
