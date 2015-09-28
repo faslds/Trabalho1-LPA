@@ -1,5 +1,5 @@
 #include<stdio.h>
-#include<stdlib.h> //para usar o malloc
+#include<stdlib.h> //para usar o malloc 
 
 freqcount(int vet[], int freq[], int n) //cria um vetor freq armazenando as frequencias dos numeros de vet (vetor onde sera gravado os numeros entrados)
 {
