@@ -3,7 +3,7 @@
 
 freqcount(int vet[], int freq[], int n) //cria um vetor freq armazenando as frequencias dos numeros de vet (vetor onde sera gravado os numeros entrados)
 {
-	int i, j, f;//, aux;
+	int i, j, f;
 	for (i=0; i<n; i++)
 	{
 		f=1; //f ja eh inicializado com 1 pois se o numero ja foi entrado, sua frequencia eh no minimo 1
