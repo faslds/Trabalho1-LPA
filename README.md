@@ -16,7 +16,8 @@ O usuário deve digitar quantos números ele quer analisar e apertar a tecla "En
 programa irá pedir que o usuário entre novamente com a quantidade de números. Após isso, devem ser digitados os n números 
 desejados, separando-os com um espaço ou a tecla "Enter" (ATENÇÃO: Se os números forem separados por espaço, teclar "Enter" 
 após a última entrada. Se forem entrados mais do que n números, o programa analisará apenas as n primeiras entradas). Após
-isso, o programa retornará o par mais próximo, suas posições e sua diferença.
+isso, o programa retornará o par mais próximo, suas posições e sua diferença. OBSERVAÇÃO: A posição impressa é em relação ao 
+vetor ordenado, não em relação à ordem entrada.
 
 2- Element Uniqueness: O usuário entra novamente com n inteiros, e o programa encontra quais desses inteiros são únicos 
 na lista. O programa também encontrará o caso em que não existe um elemento único (por exemplo, numa entrada de 5 inteiros,
